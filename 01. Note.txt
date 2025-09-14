@@ -2,3 +2,5 @@ Nama : Brian WS
 
 100 Days of Code 
 latihan dan catatan yang saya buat dari UDEMY
+
+dokumentasi python https://docs.python.org/3/

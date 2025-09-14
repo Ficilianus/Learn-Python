@@ -1,0 +1,42 @@
+Data Type, Number, Operations, Type Conversion, f-Strings
+
+type data dasar meliputi 
+    1. str(string) : huruf atau teks dan harus menggunakan tanda petik seperti ini ""
+    2. int(interger) : bilangan bulat
+    3. float : bilangan desimal menggunakan tanda titik "." bukan ","
+    4. boo(Boolean) : pernyataan True or False . oleh karena itu hanya memiliki 2 nilai saja
+
+index adalah posisi sebuah objek atau sesuatu yang sedang di cari atau di tuju.
+tujuan dari index sendiri bisa berupa mencari sebuah huruf dalam teks, mencari sebuah data dari sekumpulan data.
+index diawali dari angka 0 sebagai paling awal
+biasanya index dilambangkan dengan [] . dan akan diisi angka didalamnya
+example : 
+    code : 
+        print("Hello"[0])
+    ouput
+        H
+penjelasan dalam kata "Hello" huruf pertama atau yang ke 0 adalah huruf H 
+maka karena itu index[0] akan menunjuk huruf H 
+tapi bagaimana jika index nya diisi nilai bawah 0
+maka akan index yang di cari adalah n -(nilai yang di cari)
+example : 
+    code : 
+        print("hello"[-2])
+    ouput : 
+        l 
+
+code baru yang di pelajari
+
+len() : berfungsi untuk membaca jumlah huruf pada sebuah variabel bertipe string
+    example :
+    code : 
+        kelimat = "hello"  
+        print(len(kalimat))
+    ouput :
+        5
+Type() : berfungsi untuk memberitahukan type data yang di gunakan
+    example :
+    code : 
+        print(type(123))
+    output :
+        int
