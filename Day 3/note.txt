@@ -1,0 +1,56 @@
+Conditional Staements, Logical Operators, Code Blocks and Scope
+
+Conditional Staements menggunakan if, elif dan else
+dimana jika kondiisi if tidak terpenuhi maka akan memeriksa kondisi elif dan jika masih 
+tidak terpenuhi maka akan mengeksekusi bagian else
+
+
+example : 
+nilai = 100
+if nilai == 100 :
+    print("sempurna")
+else :
+    print("coba lagi")
+
+dikarenakan nilai nya sama dengan 100 maka akan mengeksekusi bgian if
+
+Comparison Operators :
+Operator    Meaning 
+    >       Greater Than
+    <       Less Than
+    >=      Greater Than or Equal to
+    <=      Less Than or Equal to
+    ==      Equal to
+    !=      Not Equal to
+
+modulo Operator
+dilambangkan sebagai %
+operator ini bertujuan untuk mencari sisa bagi
+example : 
+a. 10 : 2 = 5 dan sisa bagi adalah 0
+b. 10 : 3 = 3.333 sisa bagi adalah 1
+
+Nested if/else 
+if bersarang adalah kondisi dimana di dalam if ada if lagi
+example
+if condition :
+    if condition :
+        do this
+else :
+    do this
+
+if / elif / else
+elif sama seperti dengan if dan akan di gunakan hanya jika if tidak memenuhi kondisi
+
+if condition :
+    do this
+elif condition :
+    do this
+else :
+    condition
+
+logical operator
+
+1. A and B => jika keduanya sama maka true dan jika salah satu false maka hasil nya akan false
+2. A or B  => jika salah satu true maka hasil akan true
+3. not A => jika A adalah true hasil nya adalah false, begitu juga kebalikanya
