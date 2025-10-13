@@ -1,0 +1,80 @@
+random — Generate pseudo-random numbers
+sumber : https://docs.python.org/3.15/library/random.html#module-random 
+
+Distribusi Bernilai Riil (Real-valued distributions)
+
+Fungsi-fungsi berikut menghasilkan distribusi bernilai riil tertentu.
+Parameter fungsi dinamai sesuai dengan variabel yang digunakan dalam persamaan distribusi, sebagaimana digunakan dalam praktik matematika umum; sebagian besar persamaan ini dapat ditemukan di buku teks statistik mana pun.
+
+1. random.random()
+Mengembalikan bilangan acak bertipe floating-point berikutnya dalam rentang
+0.0 <= X < 1.0
+
+2. random.uniform(a, b)
+Mengembalikan bilangan acak bertipe floating-point N sehingga:
+a <= N <= b jika a <= b, dan
+b <= N <= a jika b < a.
+Nilai batas b bisa termasuk atau tidak termasuk dalam rentang tergantung pada pembulatan floating-point dalam ekspresi:
+a + (b - a) * random().
+
+3. random.triangular(low, high, mode)
+Mengembalikan bilangan acak bertipe floating-point N sehingga:
+low <= N <= high, dengan mode tertentu di antara batas-batas tersebut.
+Nilai default low dan high adalah 0 dan 1.
+Argumen mode secara default berada di titik tengah antara batas bawah dan batas atas, menghasilkan distribusi simetris.
+
+4. random.betavariate(alpha, beta)
+Distribusi Beta.
+Kondisi parameternya: alpha > 0 dan beta > 0.
+Nilai yang dikembalikan berada dalam rentang 0 hingga 1.
+
+5. random.expovariate(lambd=1.0)
+Distribusi Eksponensial.
+lambd adalah 1.0 dibagi dengan nilai rata-rata yang diinginkan, dan nilainya tidak boleh nol.
+(Parameter ini disebut “lambda”, tetapi karena “lambda” adalah kata khusus di Python, digunakan nama lambd.)
+Nilai yang dikembalikan:
+dari 0 hingga tak hingga positif jika lambd bernilai positif,
+dan dari tak hingga negatif hingga 0 jika lambd bernilai negatif.
+Perubahan pada versi 3.12: nilai default untuk lambd ditambahkan
+
+6. random.gammavariate(alpha, beta)
+Distribusi Gamma (bukan fungsi gamma!).
+Parameter bentuk (alpha) dan skala (beta) harus bernilai positif.
+(Beberapa sumber mendefinisikan beta sebagai kebalikan dari skala.)
+pdf(x)=Γ(alpha)×betaalphax(alpha−1)×e−x/beta​
+
+7.random.gauss(mu=0.0, sigma=1.0)
+Distribusi Normal (Gaussian).
+mu adalah rata-rata, dan sigma adalah simpangan baku.
+Fungsi ini sedikit lebih cepat dibandingkan normalvariate().
+
+Catatan multithreading:
+Jika dua thread memanggil fungsi ini secara bersamaan, mereka mungkin menerima nilai yang sama.
+Hal ini dapat dihindari dengan:
+Memberi setiap thread instance generator acak yang berbeda,
+Menggunakan lock di sekitar semua pemanggilan fungsi, atau
+Menggunakan fungsi normalvariate() yang lebih lambat tetapi aman untuk thread.
+Perubahan pada versi 3.11: mu dan sigma kini memiliki nilai default.
+
+8. random.lognormvariate(mu, sigma)
+Distribusi Log Normal.
+Jika kamu mengambil logaritma natural dari distribusi ini, hasilnya akan menjadi distribusi normal dengan rata-rata mu dan simpangan baku sigma.
+mu dapat bernilai berapa pun, sedangkan sigma harus lebih besar dari nol.
+
+9. random.normalvariate(mu=0.0, sigma=1.0)
+Distribusi Normal.
+mu adalah rata-rata, dan sigma adalah simpangan baku.
+Perubahan pada versi 3.11: mu dan sigma kini memiliki nilai default
+
+10. random.vonmisesvariate(mu, kappa)
+mu adalah sudut rata-rata (dalam radian, antara 0 dan 2π),
+dan kappa adalah parameter konsentrasi, yang harus bernilai ≥ 0.
+Jika kappa = 0, distribusi ini berubah menjadi distribusi sudut acak seragam antara 0 dan 2π.
+
+11. random.paretovariate(alpha)
+Distribusi Pareto.
+alpha adalah parameter bentuk (shape parameter).
+
+12. random.weibullvariate(alpha, beta)
+Distribusi Weibull.
+alpha adalah parameter skala (scale parameter) dan beta adalah parameter bentuk (shape parameter).
