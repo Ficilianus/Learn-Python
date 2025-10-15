@@ -35,12 +35,24 @@ elif choice=="paper" :
 elif choice=="scissor" :
     choiceInt=2
 
-computer_choice=random.randint(1,2)
+computer_choice=random.randint(0,2)
 if choiceInt==computer_choice:
     print("Draw")
     print("Your Choice : ")
-    print(idk[choice])
+    print(idk[choiceInt])
     print("computer choice : ")
     print(idk[computer_choice])
-elif choiceInt > choice :
-    print("")
+elif choiceInt - computer_choice == -2 or choiceInt -computer_choice ==1 :
+    print("you win")
+    print("Your choice : " )
+    print(idk[choiceInt])
+    print("computer choice : ")
+    print(idk[computer_choice])
+elif choiceInt - computer_choice == -1 or choiceInt -computer_choice ==2 :
+    print("you lose")
+    print(" your choice : ")
+    print(idk[choiceInt])
+    print("computer choide : ")
+    print(idk[computer_choice])
+else : 
+    print("error")
